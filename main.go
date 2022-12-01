@@ -3,6 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
+
+	"github.com/umbe77/aoc-2022/day01"
+	"github.com/umbe77/aoc-2022/day02"
 )
 
 func main() {
@@ -13,6 +16,8 @@ func main() {
 	fmt.Printf("Day %s\n", day)
 	switch day {
 	case "01":
-		fmt.Println("Hello World!")
+		day01.Execute()
+	case "02":
+		day02.Execute()
 	}
 }
