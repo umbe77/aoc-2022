@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"log"
 	"os"
+	"strconv"
 )
 
 const (
@@ -31,6 +32,14 @@ func ReadFile(fPath string, line func(line string)) {
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func Atoi(a string) int {
+	r, err := strconv.Atoi(a)
+	if err != nil {
+		panic(err)
+	}
+	return r
 }
 
 func Min(a, b int) int {
