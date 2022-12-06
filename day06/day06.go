@@ -34,9 +34,9 @@ func Part1(signal string) int {
 func Part2(signal string) int {
 
 	for i := 13; i < len(signal); i++ {
-		distinctValues := make(map[string]bool)
+		distinctValues := make(map[string]struct{})
 		for j := i - 13; j <= i; j++ {
-			distinctValues[string(signal[j])] = true
+			distinctValues[string(signal[j])] = struct{}{}
 		}
 		if len(distinctValues) == 14 {
 			return i + 1
