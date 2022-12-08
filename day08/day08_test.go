@@ -16,7 +16,14 @@ var sampleInput = []string{
 
 func TestPart1(t *testing.T) {
 	treeMap := day08.Parse(sampleInput)
-	result := day08.Part1(treeMap)
+	result := day08.Part1_Mine(treeMap)
+	if result != 21 {
+		t.Errorf("Expected 21, Got %d", result)
+	}
+}
+func TestPart1_Refactored(t *testing.T) {
+	treeMap := day08.Parse(sampleInput)
+	result := day08.Part1_Refactored(treeMap)
 	if result != 21 {
 		t.Errorf("Expected 21, Got %d", result)
 	}
