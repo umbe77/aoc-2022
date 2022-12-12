@@ -14,6 +14,7 @@ import (
 	"github.com/umbe77/aoc-2022/day08"
 	"github.com/umbe77/aoc-2022/day09"
 	"github.com/umbe77/aoc-2022/day10"
+	"github.com/umbe77/aoc-2022/day11"
 )
 
 func main() {
@@ -43,5 +44,7 @@ func main() {
 		day09.Execute()
 	case "10":
 		day10.Execute()
+	case "11":
+		day11.Execute()
 	}
 }
