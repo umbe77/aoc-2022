@@ -15,8 +15,8 @@ func Execute() {
 	})
 	monkeys := Parse(input)
 	fmt.Printf("Part 1: %d\n", Part1(monkeys))
-	monkeys2 := Parse(input)
-	fmt.Printf("Part 2: %d\n", Part2(monkeys2))
+	// monkeys2 := Parse(input)
+	// fmt.Printf("Part 2: %d\n", Part2(monkeys2))
 }
 
 type Monkey struct {

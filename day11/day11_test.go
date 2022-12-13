@@ -23,10 +23,11 @@ func TestPart1(t *testing.T) {
 		t.Errorf("Expected 10605, Got %d", r)
 	}
 }
-func TestPart2(t *testing.T) {
-	monkeys := day11.Parse(getInput())
-	r := day11.Part2(monkeys)
-	if r != 2713310158 {
-		t.Errorf("Expected 2713310158, Got %d", r)
-	}
-}
+
+// func TestPart2(t *testing.T) {
+// 	monkeys := day11.Parse(getInput())
+// 	r := day11.Part2(monkeys)
+// 	if r != 2713310158 {
+// 		t.Errorf("Expected 2713310158, Got %d", r)
+// 	}
+// }

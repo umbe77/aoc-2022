@@ -20,6 +20,17 @@ func (s *Stack[T]) PushN(items []T) {
 	}
 }
 
+func (s *Stack[T]) Dequeue() T {
+	if s.IsEmpty() {
+		var emptyResult T
+		return emptyResult
+	}
+	pop := (*s)[0]
+	*s = (*s)[1:]
+	return pop
+
+}
+
 func (s *Stack[T]) Pop() T {
 	if s.IsEmpty() {
 		var emptyResult T
