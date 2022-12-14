@@ -2,6 +2,7 @@ package utils
 
 import (
 	"bufio"
+	"io/ioutil"
 	"log"
 	"os"
 	"strconv"
@@ -32,6 +33,14 @@ func ReadFile(fPath string, line func(line string)) {
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func ReadAllFile(fPath string) string {
+	buf, err := ioutil.ReadFile(fPath)
+	if err != nil {
+		panic(err)
+	}
+	return string(buf)
 }
 
 func Atoi(a string) int {
