@@ -109,22 +109,23 @@ func Part1(positions []Position, line int, lower, upper Point) int {
 func Part2(positions []Position, lower, upper Point) int {
 	for y := lower.y; y <= upper.y; y++ {
 		for x := lower.x; x <= upper.x; x++ {
-			p := Point{x: x, y: y}
-			outOfRange := true
-			for _, position := range positions {
-				if isBeacon(positions, p) {
-					outOfRange = false
-					break
-				}
-				d := getDistance(position.sensor, p)
-				if d <= position.distance {
-					outOfRange = false
-					break
-				}
-			}
-			if outOfRange {
-				return p.x*4000000 + p.y
-			}
+			// p := Point{x: x, y: y}
+			// outOfRange := false
+			// for _, position := range positions {
+			// 	if isBeacon(positions, p) {
+			// 		outOfRange = false
+			// 		break
+			// 	}
+			// 	d := getDistance(position.sensor, p)
+			// 	if d <= position.distance {
+			// 		outOfRange = false
+			// 		break
+			// 	}
+			// }
+			// if outOfRange {
+			// 	return p.x*4000000 + p.y
+			// }
+			fmt.Println(x, y)
 		}
 	}
 	return 0
